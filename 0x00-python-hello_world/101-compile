@@ -1,0 +1,2 @@
+#!/bin/bash
+pythone3 -m compileall -b "$PYFILE"

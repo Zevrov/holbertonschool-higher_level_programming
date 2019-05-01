@@ -5,7 +5,7 @@ if number < 0:
     dig = number % -10
 else:
     dig = number % 10
-print("last digit of {} is {}".format(number, dig), end=' ')
+print("Last digit of {} is {}".format(number, dig), end=' ')
 if dig > 5:
     print("and is greater than 5")
 elif dig == 0:

@@ -15,7 +15,7 @@ class Square:
 
     @property
     def size(self):
-	"""int: length of square sides
+        """int: length of square sides
 
         The setter validates that the size is an integer and is 0 or greater
 
@@ -33,7 +33,7 @@ class Square:
             self.__size = value
 
     def __init__(self, size=0):
-	"""Creates a square of a given size
+        """Creates a square of a given size
 
         Size of the square is hidden
 
@@ -53,7 +53,7 @@ class Square:
         self.__size = size
 
     def area(self):
-	"""Returns the size of square
+        """Returns the size of square
 
         Returns:
             size squared for area

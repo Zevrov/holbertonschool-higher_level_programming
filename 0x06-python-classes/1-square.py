@@ -20,7 +20,7 @@ class Square:
 
         Args:
             size (int): the length of the sides
-        
+
         """
 
         self.__size = size

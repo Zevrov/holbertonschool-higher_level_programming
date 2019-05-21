@@ -7,7 +7,7 @@ definition of the square
 
 
 class Square:
-	"""a 2d square
+    """a 2d square
 
     methods for manipulating it
 
@@ -15,11 +15,11 @@ class Square:
 
     @property
     def size(self):
-		"""int: length of square sides
+	"""int: length of square sides
 
-		The setter validates that the size is an integer and is 0 or greater
+        The setter validates that the size is an integer and is 0 or greater
 
-		"""
+        """
 
         return self.__size
 
@@ -33,7 +33,7 @@ class Square:
             self.__size = value
 
     def __init__(self, size=0):
-		"""Creates a square of a given size
+	"""Creates a square of a given size
 
         Size of the square is hidden
 
@@ -48,15 +48,14 @@ class Square:
 
         if type(size) is not int:
             raise TypeError("size must be an integer")
-        elif size < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.__size = size
 
     def area(self):
-		"""Returns the size of square
+	"""Returns the size of square
 
-		Returns:
+        Returns:
             size squared for area
 
         """

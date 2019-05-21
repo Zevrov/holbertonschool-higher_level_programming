@@ -4,8 +4,10 @@
 definition of the square
 
 """
+
+
 class Square:
-	"""a 2d square
+    """a 2d square
 
     methods for manipulating it
 
@@ -13,11 +15,11 @@ class Square:
 
     @property
     def size(self):
-		"""int: length of square sides
+	"""int: length of square sides
 
-		The setter validates that the size is an integer and is 0 or greater
+        The setter validates that the size is an integer and is 0 or greater
 
-		"""
+        """
 
         return self.__size
 
@@ -31,11 +33,11 @@ class Square:
 
     @property
     def position(self):
-		"""tuple of int: the square's position on a plane
+	"""tuple of int: the square's position on a plane
 
-		The setter validates that the position is a tuple of 2 positive integers
+        The setter validates that the position is a tuple of 2 positive ints
 
-		"""
+        """
 
         return self.__position
 
@@ -48,13 +50,13 @@ class Square:
         self.__position = value
 
     def __init__(self, size=0, position=(0, 0)):
-		"""Creates a square of a given size
+	"""Creates a square of a given size
 
         Size of the square is hidden
 
         Args:
             size (int): length of the sides
-			position (tuple): the position of the square
+            position (tuple): the position of the square
 
         Raises:
             TypeError: size is not an integer
@@ -70,9 +72,9 @@ class Square:
         self.__position = position
 
     def area(self):
-		"""Returns the size of square
+	"""Returns the size of square
 
-		Returns:
+        Returns:
             size squared for area
 
         """
@@ -80,13 +82,13 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-		"""Prints out a grid of #'s representing the sqaure
+	"""Prints out a grid of #'s representing the sqaure
 
-		prints a blank line if size is 0
+        prints a blank line if size is 0
 
-		also moves the sqaure to match position
+        also moves the sqaure to match position
 
-		"""
+        """
 
         if self.__size == 0:
             print()
@@ -94,4 +96,4 @@ class Square:
         for x in range(self.__position[1]):
             print()
         for y in range(self.__size):
-            print("{}{}".format(" "  * self.__position[0], "#" * self.__size))
+            print("{}{}".format(" " * self.__position[0], "#" * self.__size))

@@ -5,6 +5,7 @@ defining the square
 
 """
 
+
 class Square:
     """a 2d square
 

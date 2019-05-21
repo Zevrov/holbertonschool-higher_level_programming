@@ -12,7 +12,6 @@ class Square:
     methods for manipulating it
 
     """
-
     def __init__(self, size=0):
         """Creates a square of a given size
 

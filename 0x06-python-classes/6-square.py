@@ -70,7 +70,7 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
-        if not(isinstance (position, tuple) and
+        if not(isinstance(position, tuple) and
                 len(position) == 2 and isinstance(position[0], int) and
                 isinstance(position[1], int) and position[0] >= 0 and
                 position[1] >= 0):

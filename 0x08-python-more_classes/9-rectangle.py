@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Rectangle class"""
-    number_of_instances += 0
+    number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
@@ -12,6 +12,11 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+
+    @property
+    def width(self):
+        """Rectangle width getter"""
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -23,9 +28,9 @@ class Rectangle:
         self.__width = value
 
     @property
-    def width(self):
-        """Rectangle width getter"""
-        return self.__width
+    def height(self):
+        """Rectangle height getter"""
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -35,11 +40,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-    @property
-    def height(self):
-        """Rectangle height getter"""
-        return self.__height
 
     def area(self):
         """Rectangle area getter"""
@@ -79,9 +79,10 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) != Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_2.area() >= rect_2.area():
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
             return rect_2
-        return rect_1
 
     @classmethod
     def square(cls, size=0):

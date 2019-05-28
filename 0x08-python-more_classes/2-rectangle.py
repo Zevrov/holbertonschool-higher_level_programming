@@ -7,14 +7,14 @@ class Rectangle:
 
 
     def __init__(self, width=0, height=0):
-    """init for Rectangle"""
+        """init for Rectangle"""
         self.width = width
         self.height = height
 
 
     @width.setter
     def width(self, value):
-    """Rectangle width setter"""
+        """Rectangle width setter"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -24,13 +24,13 @@ class Rectangle:
 
     @property
     def width(self):
-    """Rectangle width getter"""
+        """Rectangle width getter"""
         return self.__width
 
 
     @height.setter
     def height(self, value):
-    """Rectangle height setter"""
+        """Rectangle height setter"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -40,18 +40,18 @@ class Rectangle:
 
     @property
     def def height(self):
-    """Rectangle height getter"""
+        """Rectangle height getter"""
         return self.__height
 
 
     def area(self):
-    """Rectangle area getter"""
-        return self.height * self.width
+        """Rectangle area getter"""
+        return self.__height * self.__width
 
 
     def perimeter(self):
-    """returns the perimeter of the Rectangle,
-    or nothing if height/width are 0"""
-        if self.height == 0 or self.width == 0:
+        """returns the perimeter of the Rectangle,
+        or nothing if height/width are 0"""
+        if self.__height == 0 or self.__width == 0:
             return
-        return (self.height * 2) + (self.width * 2)
+        return (self.__height * 2) + (self.__width * 2)

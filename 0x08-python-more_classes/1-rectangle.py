@@ -8,14 +8,14 @@ class Rectangle:
 
 
     def __init__(self, width=0, height=0):
-    """init for Rectangle"""
+        """init for Rectangle"""
         self.width = width
         self.height = height
 
 
     @width.setter
     def width(self, value):
-    """Rectangle width setter"""
+        """Rectangle width setter"""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -25,13 +25,13 @@ class Rectangle:
 
     @property
     def width(self):
-    """Rectangle width getter"""
+        """Rectangle width getter"""
         return self.__width
 
 
     @height.setter
     def height(self, value):
-    """Rectangle height setter"""
+        """Rectangle height setter"""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:

@@ -77,6 +77,6 @@ class Rectangle:
 
 
     def __del__(self):
-        """kill the Rectangle"""
+        """kill the Rectangle, decrease instance count"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")

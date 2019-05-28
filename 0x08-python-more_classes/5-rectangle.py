@@ -5,18 +5,15 @@
 class Rectangle:
     """Rectangle class"""
 
-
     def __init__(self, width=0, height=0):
         """init for Rectangle"""
         self.width = width
         self.height = height
 
-
     @property
     def width(self):
         """Rectangle width getter"""
         return self.__width
-
 
     @width.setter
     def width(self, value):
@@ -27,12 +24,10 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-
     @property
     def height(self):
         """Rectangle height getter"""
         return self.__height
-
 
     @height.setter
     def height(self, value):
@@ -43,11 +38,9 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
-
     def area(self):
         """Rectangle area getter"""
         return self.__height * self.__width
-
 
     def perimeter(self):
         """returns the perimeter of the Rectangle,
@@ -55,7 +48,6 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return
         return (self.__height * 2) + (self.__width * 2)
-
 
     def __str__(self):
         """prints the rectangle"""
@@ -67,12 +59,10 @@ class Rectangle:
             rect.append(size)
         return "\n".join(rect)
 
-
     def __repr__(self):
         """returns representation of the Rectangle"""
         return "{:s}({:d}, {:d})".format((type(self).__name__),
-                                        self.__width, self.__height)
-
+                                         self.__width, self.__height)
 
     def __del__(self):
         """kill the Rectangle"""

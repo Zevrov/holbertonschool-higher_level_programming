@@ -13,6 +13,26 @@ class Rectangle:
         self.height = height
         Rectangle.number_of_instances += 1
 
+    def __str__(self):
+        """prints the rectangle"""
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        size = str(self.print_symbol) * self.__width
+        rect = []
+        for index in range(self.__height):
+            rect.append(size)
+        return "\n".join(rect)
+
+    def __repr__(self):
+        """returns representation of the Rectangle"""
+        return "{:s}({:d}, {:d})".format((type(self).__name__),
+                                         self.__width, self.__height)
+
+    def __del__(self):
+        """kill the Rectangle, decrease instance count"""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+
     @property
     def width(self):
         """Rectangle width getter"""
@@ -51,26 +71,6 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return
         return (self.__height * 2) + (self.__width * 2)
-
-    def __str__(self):
-        """prints the rectangle"""
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        size = str(self.print_symbol) * self.__width
-        rect = []
-        for index in range(self.__height):
-            rect.append(size)
-        return "\n".join(rect)
-
-    def __repr__(self):
-        """returns representation of the Rectangle"""
-        return "{:s}({:d}, {:d})".format((type(self).__name__),
-                                         self.__width, self.__height)
-
-    def __del__(self):
-        """kill the Rectangle, decrease instance count"""
-        Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):

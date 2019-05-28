@@ -10,6 +10,16 @@ class Rectangle:
         self.width = width
         self.height = height
 
+    def __str__(self):
+        """prints the rectangle"""
+        if self.__height == 0 or self.__width == 0:
+            return ""
+        size = "#" * self.__width
+        rect = []
+        for index in range(self.__height):
+            rect.append(size)
+        return "\n".join(rect)
+
     @property
     def width(self):
         """Rectangle width getter"""
@@ -48,13 +58,3 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return
         return (self.__height * 2) + (self.__width * 2)
-
-    def __str__(self):
-        """prints the rectangle"""
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        size = "#" * self.__width
-        rect = []
-        for index in range(self.__height):
-            rect.append(size)
-        return "\n".join(rect)

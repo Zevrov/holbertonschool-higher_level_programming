@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Rectangle class"""
-    number_of_instances += 0
+    number_of_instances = 0
 
 
     def __init__(self, width=0, height=0):
@@ -12,6 +12,12 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+
+
+    @property
+    def width(self):
+        """Rectangle width getter"""
+        return self.__width
 
 
     @width.setter
@@ -25,9 +31,9 @@ class Rectangle:
 
 
     @property
-    def width(self):
-        """Rectangle width getter"""
-        return self.__width
+    def height(self):
+        """Rectangle height getter"""
+        return self.__height
 
 
     @height.setter
@@ -38,12 +44,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-
-    @property
-    def def height(self):
-        """Rectangle height getter"""
-        return self.__height
 
 
     def area(self):

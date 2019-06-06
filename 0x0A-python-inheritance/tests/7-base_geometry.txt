@@ -1,0 +1,27 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> BaseGeometry.integer_validator("width", 20)
+
+>>> BaseGeometry.integer_validator("idk", 0)
+Traceback (most recent call last):
+ValueError: idk must be greater than 0
+
+>>> BaseGeometry.integer_validator("width", 5, 4)
+Traceback (most recent call last):
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+>>> BaseGeometry.integer_validator("Time", -32)
+Traceback (most recent call last):
+ValueError: Time must be greater than 0
+
+>>> BaseGeometry.integer_validator("Life", 4.2)
+Traceback (most recent call last):
+TypeError: Life must be an integer
+
+>>> BaseGeometry.integer_validator("cat", "Maiq")
+Traceback (most recent call last):
+TypeError: cat must be an integer
+
+>>> BaseGeometry.integer_validator("width")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'

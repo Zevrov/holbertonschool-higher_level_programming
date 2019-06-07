@@ -15,7 +15,7 @@ class Student:
             return self.__dict__
         if isinstance(attrs, list):
             for things in attrs:
-                if not isinstance(attrs, list):
+                if not isinstance(things, str):
                     return self.__dict__
         else:
             return self.__dict__

@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+"""method for student creation"""
 
 
 class Student:
-"""Student obj"""
+    """Student obj"""
 
     def __init__(self, first_name, last_name, age):
     """Set age, and name of student"""

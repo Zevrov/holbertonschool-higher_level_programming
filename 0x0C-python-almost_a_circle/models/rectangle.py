@@ -85,3 +85,19 @@ class Rectangle(Base):
                                                                  self.__y,
                                                                  self.__width,
                                                                  self.__height)
+    def update(self, *args):
+        """updates the rectangle??? i think"""
+        index = 0
+        if args is not None and len(args) != 0:
+            for argument in args:
+                index += 1
+                if index == 1:
+                    self.id = argument
+                elif index == 2:
+                    self.__width = argument
+                elif index == 3:
+                    self.__height = argument
+                elif index == 4:
+                    self.__x = argument
+                elif index == 5:
+                    self.__y = argument

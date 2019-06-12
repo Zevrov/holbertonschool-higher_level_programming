@@ -2,6 +2,7 @@
 """Base model"""
 import json
 
+
 class Base:
     """class for base"""
     __nb_objects = 0

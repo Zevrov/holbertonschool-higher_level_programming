@@ -17,14 +17,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """returns JSON string rep"""
+        """Dictionary to Json string"""
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """saves to file"""
+        """Json string to file"""
         list = []
         if list_objs is not None:
             list = [items.to_dictionary() for items in list_objs]
@@ -33,7 +33,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """returns from json"""
+        """Json string to dictionary"""
         if json_string is None or len(json_string) == 0:
-            return "[]"
+            return []
         return json.loads(json_string)

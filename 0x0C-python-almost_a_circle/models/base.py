@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-
+"""Base model"""
 
 class Base:
+    """class for base"""
     __nb_objects = 0
 
     def __init__(self, id=None):

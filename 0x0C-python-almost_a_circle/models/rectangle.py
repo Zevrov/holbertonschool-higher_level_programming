@@ -73,7 +73,7 @@ class Rectangle(Base):
     def display(self):
         """Displays the shape"""
         rect = "" + ' ' * self.__x
-        rect = rect + str('#') * self.__width
+        rect += str('#') * self.__width
         rect = '\n' * self.__y + '\n'.join(
                     list(rect for index in range(self.__height)))
         print(rect)

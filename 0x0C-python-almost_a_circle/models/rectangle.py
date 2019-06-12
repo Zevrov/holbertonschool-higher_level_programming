@@ -86,7 +86,7 @@ class Rectangle(Base):
                                                                  self.__width,
                                                                  self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates the rectangle??? i think"""
         index = 0
         if args is not None and len(args) != 0:
@@ -102,3 +102,6 @@ class Rectangle(Base):
                     self.__x = argument
                 elif index == 5:
                     self.__y = argument
+        else:
+            for key, values in kwargs.items():
+                setattr(self, key, values)

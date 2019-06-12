@@ -67,19 +67,19 @@ class Base:
         for rect in list_rectangles:
             turtle.pencolor(red)
             turtle.setpos(rect.x, rect.y)
-            turtle.down()
+            turtle.pendown()
             for i in range(2):
                 turtle.forward(rect.height)
                 turtle.left(90)
                 turtle.forward(rect.width)
                 turtle.left(90)
-            turtle.up()
+            turtle.penup()
         for sq in list_squares:
             turtle.pencolor(blue)
             turtle.setpos(sq.x, sq.y)
-            turtle.down()
+            turtle.pendown()
             for i in range(4):
                 turtle.foward(sq.height)
                 turtle.left(90)
-            turtle.up()
+            turtle.penup()
         turtle.exitonclick()

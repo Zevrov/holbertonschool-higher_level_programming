@@ -2,6 +2,7 @@
 """Base model"""
 import json
 import os.path
+import turtle
 
 
 class Base:
@@ -57,3 +58,28 @@ class Base:
         with open(cls.__name__ + ".json", "r") as file:
             stuff = cls.from_json_string(file.read())
         return [cls.create(**index) for index in stuff]
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """draws our shapes"""
+        turtle.getscreen()
+        turtle.shape("turtle")
+        for rect in list_rectangles:
+            turtle.pencolor(red)
+            turtle.setpos(rect.x, rect.y)
+            turtle.down()
+            for i in range(2):
+                turtle.forward(rect.height)
+                turtle.left(90)
+                turtle.forward(rect.width)
+                turtle.left(90)
+            turtle.up()
+        for sq in list_squares:
+            turtle.pencolor(blue)
+            turtle.setpos(sq.x, sq.y)
+            turtle.down()
+            for i in range(4):
+                turtle.foward(sq.height)
+                turtle.left(90)
+            turtle.up()
+        turtle.exitonclick()

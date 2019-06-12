@@ -26,3 +26,21 @@ class Square(Rectangle):
                                                          self.x,
                                                          self.y,
                                                          self.height)
+
+    def update(self, *args, **kwargs):
+        """updates the square??? i think"""
+        index = 0
+        if args is not None and len(args) != 0:
+            for argument in args:
+                index += 1
+                if index == 1:
+                    self.id = argument
+                elif index == 2:
+                    self.size = argument
+                elif index == 3:
+                    self.y = argument
+                elif index == 4:
+                    self.x = argument
+        else:
+            for key, values in kwargs.items():
+                setattr(self, key, values)

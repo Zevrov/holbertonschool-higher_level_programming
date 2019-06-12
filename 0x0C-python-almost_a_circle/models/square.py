@@ -38,9 +38,9 @@ class Square(Rectangle):
                 elif index == 2:
                     self.size = argument
                 elif index == 3:
-                    self.y = argument
-                elif index == 4:
                     self.x = argument
+                elif index == 4:
+                    self.y = argument
         else:
             for key, values in kwargs.items():
                 setattr(self, key, values)

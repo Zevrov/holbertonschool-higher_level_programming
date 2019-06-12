@@ -8,6 +8,7 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """initialize the square"""
         super().__init__(size, size, x, y, id)
+
     @property
     def size(self):
         """size getter"""
@@ -22,6 +23,6 @@ class Square(Rectangle):
     def __str__(self):
         """returns information about the shape"""
         return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
-                                                                 self.x,
-                                                                 self.y,
-                                                                 self.height)
+                                                         self.x,
+                                                         self.y,
+                                                         self.height)

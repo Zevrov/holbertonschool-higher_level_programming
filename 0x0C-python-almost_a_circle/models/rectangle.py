@@ -61,9 +61,9 @@ class Rectangle(Base):
         """Validates input"""
         if type(value) is not int:
             raise TypeError("{:s} must be an integer".format(name))
-        if (name == "height" or name == "width") and value < 0:
+        if (name == "height" or name == "width") and value <= 0:
             raise ValueError("{:s} must be > 0".format(name))
-        if (name == "y" or name == "x") and value <= 0:
+        if (name == "y" or name == "x") and value < 0:
             raise ValueError("{:s} must be >= 0".format(name))
 
     def area(self):
@@ -76,7 +76,7 @@ class Rectangle(Base):
         rect += str('#') * self.__width
         rect = '/n' * self.__y + '/n'.join(
                     list(rect for index in range(self.__height)))
-        print rect
+        print(rect)
 
     def __str__(self):
         """returns information about the shape"""

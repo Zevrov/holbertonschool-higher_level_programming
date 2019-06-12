@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Base model"""
-
+import json
 
 class Base:
     """class for base"""

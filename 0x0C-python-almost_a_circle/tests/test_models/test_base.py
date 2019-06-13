@@ -2,10 +2,13 @@
 """Unittests for base model"""
 import unittest
 import json
+import os
 from models.base import Base
+from models.rectangle import Rectangle
+from models.square import Square
 
 
-class test_base(unittest.TestCase):
+class testbase(unittest.TestCase):
     """unit testing"""
     def setup(self):
         """setup"""
@@ -19,6 +22,10 @@ class test_base(unittest.TestCase):
         y = Base()
         self.assertEqual(x.id, 1)
         self.assertEqual(y.id, 2)
+
+    def test_docstring(self):
+        """test docstring"""
+        self.assertIsNotNone(Base.__doc__)
 
     def Nargs(self):
         """testing for no arguments"""

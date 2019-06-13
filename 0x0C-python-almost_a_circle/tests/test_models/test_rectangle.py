@@ -20,19 +20,19 @@ class rectangle_tests(unittest.TestCase):
         importlib.reload(models.rectangle)
 
     def test_TooFewArgs(self):
-        """Test for too few args to init"""
+        """Test too few args"""
         err = "missing heigt arg fool"
         with self.assertRaises(TypeError, msg=err):
             Rect(1)
 
     def def test_TooManyArgs(self):
-        """Test for too many args to init"""
+        """Test too many args"""
         err = "too many arguments man"
         with self.assertRaises(TypeError, msg=err):
             Rect(1, 1, 1, 1, 1, 1)
 
     def test_Area(self):
-        """Compare width and height to result of area method"""
+        """check if area is working"""
         testrect = Rect(7, 6)
         with self.subTest():
             self.assertEqual(testrect.area(), 42)

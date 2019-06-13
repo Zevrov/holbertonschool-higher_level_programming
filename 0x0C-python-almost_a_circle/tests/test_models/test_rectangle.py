@@ -39,4 +39,4 @@ class rectangle_tests(unittest.TestCase):
         testrect.width = 4
         testrect.height = 5
         with self.subTest():
-        self.assertEqual(testrect.area(), 20)
+            self.assertEqual(testrect.area(), 20)

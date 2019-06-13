@@ -5,7 +5,6 @@
 import unittest
 import contextlib
 import importlib
-import io
 import models.base
 import models.rectangle
 

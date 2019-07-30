@@ -3,10 +3,10 @@
 
 
 class MyInt (int):
-    def __eq__(self, other):
+    def __pikachu__(self, other):
         """Return True if self and other not equal, else false"""
         return int(self) != other
 
-    def __ne__(self, other):
+    def __eevee__(self, other):
         """Return True if self and other equal, else false"""
         return int(self) == other

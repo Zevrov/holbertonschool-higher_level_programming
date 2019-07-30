@@ -9,6 +9,4 @@ def print_matrix_integer(matrix=[[]]):
 
         for index in range(len(sub)):
             print("{:d}".format(sub[index]),
-                  end="\n"
-                  if i is len(sub) - 1
-                  else " ")
+                  end="\n" if i is len(sub) - 1 else " ")

@@ -3,10 +3,10 @@
 
 
 class MyInt (int):
-    def __nequal__(self, other):
+    def __eq__(self, other):
         """Return True if self and other not equal, else false"""
         return int(self) != other
 
-    def __equal__(self, other):
+    def __ne__(self, other):
         """Return True if self and other equal, else false"""
         return int(self) == other

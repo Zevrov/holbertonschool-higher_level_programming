@@ -18,12 +18,11 @@ if __name__ == "__main__":
 
     new = State(name='Louisiana')
 
+    new = State(name='Louisiana')
     session.add(new)
-    session.flush()
     session.commit()
+    session.close()
 
-    Murica = session.query(State).order_by(State.id.desc()).first()
+    Murica = session.query(State).filter(State.name == 'Louisiana').one()
 
     print(Murica.id)
-
-    session.close()

@@ -17,6 +17,6 @@ if __name__ == '__main__':
     curs.execute("SELECT * FROM states ORDER BY id ASC")
     rows = curs.fetchall()
     for row in rows:
-        print("{}".format(row))
+        print(row)
     curs.close()
     database.close()

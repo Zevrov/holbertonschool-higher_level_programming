@@ -9,7 +9,7 @@ url = "http://0.0.0.0:5000/search_user"
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         search = {'q': '""'}
-     else:
+    else:
         search = {'q': sys.argv[1]}
     request = requests.post(url, search)
     try:

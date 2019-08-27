@@ -10,4 +10,4 @@ if __name__ == "__main__":
         "https://api.github.com/user",
         auth=(sys.argv[1], sys.argv[2])
     )
-    print(search.json().get("if"))
+    print(search.json().get("id"))

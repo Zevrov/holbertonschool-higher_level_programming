@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
 const process = require('process');
-let arg = process.argv[2];
-let String = 'C is fun';
+const arg = process.argv[2];
+const String = 'C is fun';
 if (isNaN(arg)) {
   console.log('Missing number of occurrences');
 } else {

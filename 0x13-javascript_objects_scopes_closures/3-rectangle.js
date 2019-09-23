@@ -6,15 +6,14 @@ module.exports = class Rectangle {
       this.height = y;
     }
   }
-};
 
   print () {
-    const array [];
+    const array = [];
     for (let index = 0; index < this.width; index++) {
       array.push('X');
     }
     for (let index = 0; index < this.height; index++) {
       console.log(array.join(''));
     }
-}
+  }
 };

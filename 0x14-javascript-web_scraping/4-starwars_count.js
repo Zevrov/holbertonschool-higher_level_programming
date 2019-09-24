@@ -9,7 +9,7 @@ request(url, (error, response, body) => {
   const result = JSON.parse(body).results;
   for (const movie of result) {
     for (const character of movie.characters) {
-      if (character.includes("/18/")|| character.includes("/18")) {
+      if (character.includes('/18/') || character.includes('/18')) {
         count++;
       }
     }
